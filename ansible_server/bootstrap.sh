@@ -43,14 +43,14 @@ chown -R vagrant:vagrant /home/vagrant
 
 # ssh key generation
 sudo -i
-ssh-keygen -t rsa
-#cat .ssh/id_rsa.pub
+mkdir .ssh
 touch .ssh/authorized_keys
+
 #ssh-copy-id root@10.0.15.16 -yes
 
 # configure hosts file for our internal network defined by Vagrantfile
 cat >> /etc/hosts <<EOL
 # vagrant environment nodes
-10.0.15.15  mgmt
-10.0.15.16  lb
+10.0.15.15  amaster
+10.0.15.16  aagent
 EOL

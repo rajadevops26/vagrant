@@ -30,6 +30,6 @@ echo "export TERM=xterm" >> /etc/bashrc
 
 cat >> /etc/hosts <<EOL
 # vagrant environment nodes
-10.0.15.15  mgmt
-10.0.15.16  lb
+10.0.15.15  amaster
+10.0.15.16  aagent
 EOL
